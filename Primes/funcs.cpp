@@ -1,17 +1,16 @@
 #include "headers.cpp"
 
-bool isPrime(vector<int> primes, int target){
-    for (int i=1; primes[i] * primes[i] <= target; i++) {
-        if (target % primes[i] == 0) {
-            return false;
-        }
+bool isPrime(vector<int> primes, int target) {
+    for (int i: primes){
+        if (target % i) continue;
+        else return false;
+        if (target < i*i) return true;
     }
     return true;
 }
 
 void printVector(vector<int> primes) {
-    for (int i=0; i<primes.size(); i++) {
-        cout << primes[i] << " ";
-    }
-    cout << endl;
+    for (int i: primes) {
+        cout << i << ' ';
+    }   cout << endl;
 }
