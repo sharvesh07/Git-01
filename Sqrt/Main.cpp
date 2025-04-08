@@ -12,4 +12,6 @@ int main(){
     while (num < 0);
 
     cout << sqrt(num) << endl;
+
+    return 0;
 }
