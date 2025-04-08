@@ -7,8 +7,11 @@ int main(){
     do {
         cout << "Enter the Number of Primes: ";
         cin >> size;
-        if (size < 1) cout << "Warning: Size should be greater than 0." << endl << "Try Again." << endl;
-    } while (size < 1);
+        if (size < 1) {
+            cout << "Warning: Size should be greater than 0." << endl;
+            cout << "Try Again." << endl;
+        }
+    }   while (size < 1);
 
     vector<int> primes;
     primes.push_back(2);

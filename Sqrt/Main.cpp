@@ -7,9 +7,11 @@ int main(){
     do {
         cout << "Enter the Number: ";
         cin >> num;
-        if (num < 0) cout << "Warning: Number shoule be Positive.\nTry Again." << endl;
-    }
-    while (num < 0);
+        if (num < 0) {
+            cout << "Warning: Number shoule be Positive." << endl;
+            cout << "Try Again." << endl;
+        }
+    }   while (num < 0);
 
     cout << sqrt(num) << endl;
 
